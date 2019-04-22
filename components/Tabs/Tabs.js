@@ -1,8 +1,10 @@
 /* <== REFACTORED WORK ==> */
 class Tabs {
-  constructor(className) {
-    this.tabs = document.querySelectorAll(`${className}`);
-    this.tabs = Array.from(this.tabs).map((tab) => (tab = new TabLink(tab)));
+  constructor(primaryClassName, secondaryClassName) {
+    this.tabs = document.querySelectorAll(`${primaryClassName}`);
+    this.tabs = Array.from(this.tabs).map(
+      (tab) => (tab = new TabLink(tab, secondaryClassName)),
+    );
     this.tabs.forEach((tab) => {
       if (tab.tabElement.classList.contains('active-tab'))
         this.currentSelection = tab.tabData;
@@ -27,11 +29,11 @@ class Tabs {
 }
 
 class TabLink {
-  constructor(tabElement) {
+  constructor(tabElement, className) {
     this.tabElement = tabElement;
     this.tabData = this.tabElement.dataset.tab;
     this.cards = document.querySelectorAll(
-      `.card[data-tab = '${this.tabData}']`,
+      `${className}[data-tab = '${this.tabData}']`,
     );
     this.cards = Array.from(this.cards).map((card) => new TabCard(card));
   }
@@ -59,7 +61,7 @@ class TabCard {
   }
 }
 
-let tabs = new Tabs('.tab');
+let tabs = new Tabs('.tab', '.card');
 
 /* <== MVP WORK BELOW ==> */
 /* class TabLink {
