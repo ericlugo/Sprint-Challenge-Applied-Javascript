@@ -42,10 +42,10 @@ Edit this document to include your answers after each question. Make sure to lea
 
 ### Git Set up
 
-* [ ] Fork the project into your GitHub user account
-* [ ] Clone the forked project into a directory on your machine
-* [ ] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
-* [ ] You are now ready to build this project with your preferred IDE
+* [x] Fork the project into your GitHub user account
+* [x] Clone the forked project into a directory on your machine
+* [x] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
+* [x] You are now ready to build this project with your preferred IDE
 
 ## Minimum Viable Product
 
@@ -68,3 +68,7 @@ Your stretch challenge is to write the functionality of a `Carousel` component. 
 * [ ] Create an 'infinite loop' carousel. In which as long as you click on an arrow, the array of images will loop over itself.
 
 * [ ] If you have finished the above, play around with the styling on all the components, and understand how each is built.
+
+---
+
+### This fork is maintained by: Eric SarragaLugo
